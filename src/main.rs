@@ -2,7 +2,7 @@ const WINNING_SQUARE: i32 = 100;
 const BOARD_SIZE: usize = WINNING_SQUARE as usize + 13;
 const PLAYERCOUNT: usize = 4;
 const MAX_TURNS: i32 = 136;
-const GAMES: i32 = 1;
+const GAMES: i32 = 1000;
 
 #[derive(Clone,Copy)]
 struct Player {
@@ -27,7 +27,7 @@ impl Player {
     }
 
     fn print(&self, player_nr: usize) {
-        println!("Player {} has won {} times with an average of {} turns. He got hit {} times.", player_nr, self.wins, self.mean, self.times_hit);
+        println!("Player {} has won {} times ({:.2}%) with an average of {} turns. He got hit {} times.", player_nr, self.wins, (self.wins as f32) / (GAMES as f32) * 100., self.mean, self.times_hit);
     }
 }
 
