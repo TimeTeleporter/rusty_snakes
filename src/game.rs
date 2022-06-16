@@ -1,5 +1,61 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 use crate::player::*;
 use crate::*;
+
+pub const WINNING_SQUARE: i32 = 100;
+pub const BOARD_SIZE: usize = WINNING_SQUARE as usize + 14;
+pub const MAX_TURNS: i32 = 136;
 
 pub trait Playable {
     fn play_game(&mut self);
@@ -100,3 +156,5 @@ fn ladder(board: &mut [i32; BOARD_SIZE], pos: i32, jump: i32) {
 fn snake(board: &mut [i32; BOARD_SIZE], pos: i32, fall: i32) {
     board[pos as usize] = fall-pos;
 }
+
+*/

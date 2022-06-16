@@ -1,15 +1,13 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
+
 mod game;
-mod player;
+mod score;
+
 
 use clap::Parser;
-use game::*;
 
-pub const WINNING_SQUARE: i32 = 100;
-pub const BOARD_SIZE: usize = WINNING_SQUARE as usize + 14;
-pub const MAX_TURNS: i32 = 136;
 
 /// A simple snakes-and-ladders that plays itself
 #[derive(Parser, Debug)]
@@ -29,7 +27,26 @@ pub struct Args {
 
 }
 
+
+mod menu {}
+
+
 fn main() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
     let args = Args::parse();
 
     let games = args.games;
@@ -41,4 +58,5 @@ fn main() {
     }
 
     game.print_players(games);
+    */
 }
