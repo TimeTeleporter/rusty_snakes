@@ -2,7 +2,6 @@
 #![allow(unused_variables)]
 
 mod game;
-mod board;
 mod player;
 
 use clap::Parser;
