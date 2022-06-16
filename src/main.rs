@@ -1,12 +1,16 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 
-pub const WINNING_SQUARE: i32 = 100;
-pub const BOARD_SIZE: usize = WINNING_SQUARE as usize + 13;
-pub const MAX_TURNS: i32 = 136;
+mod game;
+mod board;
+mod player;
 
 use clap::Parser;
-use modules::Game;
+use game::*;
+
+pub const WINNING_SQUARE: i32 = 100;
+pub const BOARD_SIZE: usize = WINNING_SQUARE as usize + 14;
+pub const MAX_TURNS: i32 = 136;
 
 /// A simple snakes-and-ladders that plays itself
 #[derive(Parser, Debug)]
@@ -25,8 +29,6 @@ pub struct Args {
     verbose: bool,
 
 }
-
-mod modules;
 
 fn main() {
     let args = Args::parse();
